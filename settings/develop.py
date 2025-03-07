@@ -1,0 +1,1 @@
+WFS_DB_URL = r"sqlite:///./wfs.db"
