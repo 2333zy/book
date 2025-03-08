@@ -1,5 +1,5 @@
 from datetime import datetime
-from typing import Optional
+from typing import Optional, List
 
 from sqlalchemy.exc import NoResultFound
 from sqlalchemy.orm import Session
@@ -33,3 +33,7 @@ class BookRepositoryImpl(BookRepository):
             return book_orm.to_entity()
         except NoResultFound:
             return None
+
+    def get_all_books(self) -> List[Book]:
+        books_orm = self.session.query(BookModel).all()
+        return [book_orm.to_entity() for book_orm in books_orm]

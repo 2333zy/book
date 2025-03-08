@@ -1,4 +1,4 @@
-from typing import Optional
+from typing import Optional, List
 
 from domain.entity.book import Book
 from domain.repository.book_repository import BookRepository
@@ -11,3 +11,6 @@ class BookQueryServiceImpl(BookQueryService):
 
     def get_book_by_id(self, book_id: int) -> Optional[Book]:
         return self.repository.find_book_by_id(book_id)
+
+    def get_all_books(self) -> List[Book]:
+        return self.repository.get_all_books()
