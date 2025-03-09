@@ -1,1 +1,1 @@
-WFS_DB_URL = r"sqlite:///./wfs.db"
+WFS_DB_URL = r"sqlite:///data/wfs.db"

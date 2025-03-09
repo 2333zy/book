@@ -3,4 +3,5 @@
   <component name="Black">
     <option name="sdkName" value="Workflow" />
   </component>
+  <component name="ProjectRootManager" version="2" project-jdk-name="Workflow" project-jdk-type="Python SDK" />
 </project>

@@ -60,7 +60,7 @@ async def delete_book(book_id: int, command_service: BookCommandService = Depend
 
 
 @app.put('/book/{book_id}')
-async def update_book(book_id: int, data: BookQueryModel,
+async def update_book(book_id: int, data: BookCreateModel,
                       command_service: BookCommandService = Depends(book_command_service)):
     try:
         print(data)
